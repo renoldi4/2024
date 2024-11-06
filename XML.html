@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title>XML</title>
+
+<style>
+  body {
+      font-family: Arial, sans-serif; 
+      background-color: #f0f9f0; 
+      margin: 20px; 
+  }
+
+  table {
+      width: 100%; 
+      border-collapse: collapse; 
+      margin: 20px 0; 
+  }
+
+  th, td {
+      padding: 10px;
+      text-align: left; 
+      border: 1px solid #4CAF50; 
+  }
+
+  th {
+      background-color: #4CAF50; 
+      color: white; 
+  }
+
+  tr:nth-child(even) {
+      background-color: #d9edda; 
+  }
+
+  tr:hover {
+      background-color: #c3e6cb; 
+  }
+
+  tbody tr {
+      transition: background-color 0.3s;
+  }
+  a {
+      text-decoration: none;  
+      color: inherit;         
+  }
+</style>
+</head>
+<body>
+
+<table border="1">
+
+<tbody id="demo">
+  <div>Clicca sulle immagini id accedere alla persona: </div>
+</tbody>
+
+<script>
+
+  var stampa="";
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "jsanta.json", true);
+  xmlhttp.send();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      for (var x=0; x<myObj.nomi.length; x++) {
+        var id = myObj.nomi[x].id;
+        stampa += "<tr><td><a href='destinazione.html?id=" + id + "'><img src='img.png' style='margin-right:10px;' align='left'/>" + myObj.nomi[x].nome 
+
+  
+        +  "</a>" + "</td>" + "<td>" + myObj.nomi[x].cognome 
+        + "</td>" + "<td>" + myObj.nomi[x].eta 
+        + "</td>" + "<td>" + myObj.nomi[x].indirizzo 
+        + "</td>" + "<td>" + myObj.nomi[x].citta 
+        + "</td>" +  "<td>" + myObj.nomi[x].telefoni 
+        + "</td>" +  "<td>" + myObj.nomi[x].sport + "</td></tr>";
+      }
+      document.getElementById("demo").innerHTML = stampa;
+      
+    } 
+  };
+  
+
+</script>
+
+
+
+</table>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destinazione</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+      background-color: #f0f9f0; 
+      margin: 20px; 
+    }
+
+    .dettagli {
+      margin-top: 20px;
+    }
+
+    .dettagli p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .img-container {
+      max-width: 100px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Dettagli della persona</h1>
+<div class="dettagli" id="dettagliPersona"></div>
+
+
+<script>
+  function getParameterByName(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  function loadDetails(personId) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "jsanta.json", true);  
+    xmlhttp.send();
+
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        
+        var person = myObj.nomi.find(p => p.id == personId);
+        
+        if (person) {
+          var stampa = `
+            <div class="img-container">
+             <img src="img.png" style="width: 100px;">
+            </div>
+
+            <p><strong>Nome:</strong> ${person.nome}</p>
+            <p><strong>Cognome:</strong> ${person.cognome}</p>
+            <p><strong>Eta:</strong> ${person.eta}</p>
+            <p><strong>Indirizzo:</strong> ${person.indirizzo}</p>
+            <p><strong>Citta:</strong> ${person.citta}</p>
+            <p><strong>Telefoni:</strong> ${person.telefoni}</p>
+            <p><strong>Sport:</strong> ${person.sport}</p>
+          `;
+          document.getElementById("dettagliPersona").innerHTML = stampa;
+        }
+      }
+    };
+  }
+
+  var personId = getParameterByName('id');
+  if (personId) {
+    loadDetails(personId);
+  }
+</script>
+
+</body>
+</html>

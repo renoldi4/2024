@@ -1,0 +1,25 @@
+{
+    "nomi": [
+      {
+        "id": 1,
+        "nome": "Davide",
+        "cognome": "Raino",
+        "eta": "23",
+        "indirizzo": "Via Montebello 3",
+        "citta": "Casnago",
+        "telefoni": ["1234", "3"],
+        "sport": ["Palestra", "Kong Fu"]
+      },
+      {
+        "id": 2,
+        "nome": "Manuele",
+        "cognome": "Raito",
+        "eta": "23",
+        "indirizzo": "Via Montebrutto 3",
+        "citta": "Laina",
+        "telefoni": ["3434343434", "2", "777"],
+        "sport": ["Palestra", "Nuoto", "Difesa"]
+      }
+    ]
+  }
+  
