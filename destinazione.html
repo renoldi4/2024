@@ -4,31 +4,106 @@
   <title>Destinazione</title>
   <style>
     body {
-      font-family: Arial, sans-serif; 
-      background-color: #f0f9f0; 
-      margin: 20px; 
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      margin: 20px;
+      color: #333;
     }
 
-    .dettagli {
-      margin-top: 20px;
+    .curriculum-container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .dettagli p {
-      font-size: 16px;
-      line-height: 1.6;
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    .img-container {
-      max-width: 100px;
+    .header img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .header h2 {
+      font-size: 18px;
+      color: #555;
+      margin: 5px 0 0 0;
+    }
+
+    .section {
       margin-bottom: 20px;
+    }
+
+    .section h3 {
+      font-size: 20px;
+      border-bottom: 2px solid #4CAF50;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+    }
+
+    .section p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .contact-info span {
+      display: block;
     }
   </style>
 </head>
 <body>
 
-<h1>Dettagli della persona</h1>
-<div class="dettagli" id="dettagliPersona"></div>
+<div class="curriculum-container">
+  <div class="header" id="header">
+    <img src="img.png" alt="Foto Profilo">
+    <h1 id="nomeCompleto"></h1>
+    <h2 id="etaCitta"></h2>
+  </div>
 
+  <div class="contact-info">
+    <span id="indirizzo"></span>
+    <span id="telefoni"></span>
+    <span id="lingue"></span>
+  </div>
+
+  <div class="section">
+    <h3>Sport</h3>
+    <p id="sport"></p>
+  </div>
+
+  <div class="section">
+    <h3>Istruzione</h3>
+    <p id="istruzione"></p>
+  </div>
+
+  <div class="section">
+    <h3>Esperienza Lavorativa</h3>
+    <p id="esperienza"></p>
+  </div>
+
+  <div class="section">
+    <h3>Hobby</h3>
+    <p id="hobby"></p>
+  </div>
+</div>
 
 <script>
   function getParameterByName(name) {
@@ -37,41 +112,42 @@
   }
 
   function loadDetails(personId) {
+    var fileName = `j${personId}.json`;
+
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "jsanta.json", true);  
+    xmlhttp.open("GET", fileName, true);
     xmlhttp.send();
 
-    xmlhttp.onreadystatechange = function() {
+    xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        
-        var person = myObj.nomi.find(p => p.id == personId);
-        
-        if (person) {
-          var stampa = `
-            <div class="img-container">
-             <img src="img.png" style="width: 100px;">
-            </div>
+        var person = JSON.parse(this.responseText);
 
-            <p><strong>Nome:</strong> ${person.nome}</p>
-            <p><strong>Cognome:</strong> ${person.cognome}</p>
-            <p><strong>Eta:</strong> ${person.eta}</p>
-            <p><strong>Indirizzo:</strong> ${person.indirizzo}</p>
-            <p><strong>Citta:</strong> ${person.citta}</p>
-            <p><strong>Telefoni:</strong> ${person.telefoni}</p>
-            <p><strong>Sport:</strong> ${person.sport}</p>
-          `;
-          document.getElementById("dettagliPersona").innerHTML = stampa;
-        }
+        document.getElementById("nomeCompleto").innerText = person.nome + " " + person.cognome;
+        document.getElementById("etaCitta").innerText = `Eta: ${person.eta} - ${person.citta}`;
+        document.getElementById("indirizzo").innerText = "Indirizzo: " + person.indirizzo;
+        document.getElementById("telefoni").innerText = "Telefoni: " + person.telefoni.join(", ");
+        document.getElementById("lingue").innerText = "Lingue: " + person.lingue.join(", ");
+        document.getElementById("sport").innerText = person.sport.join(", ");
+        document.getElementById("istruzione").innerText = person.istruzione;
+
+        var esperienzaText = "";
+        person.esperienza.forEach(function (exp) {
+          esperienzaText += `${exp.posizione} presso ${exp.azienda} (${exp.durata})<br>`;
+        });
+        document.getElementById("esperienza").innerHTML = esperienzaText;
+
+        document.getElementById("hobby").innerText = person.hobby.join(", ");
       }
     };
   }
 
-  var personId = getParameterByName('id');
+  var personId = getParameterByName("id");
   if (personId) {
     loadDetails(personId);
   }
+
 </script>
 
 </body>
 </html>
+
