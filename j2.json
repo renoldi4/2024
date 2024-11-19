@@ -1,0 +1,21 @@
+{
+    "id": 2,
+    "nome": "Manuele",
+    "cognome": "Raito",
+    "eta": 23,
+    "indirizzo": "Via Montebrutto 3",
+    "citta": "Laina",
+    "telefoni": ["3434343434", "2", "777"],
+    "sport": ["Palestra", "Nuoto", "Difesa"],
+    "istruzione": "Laurea in moda",
+    "esperienza": [
+      {
+        "posizione": "Assistente",
+        "azienda": "Modax",
+        "durata": "1 anno"
+      }
+    ],
+    "lingue": ["Italiano", "Francese"],
+    "hobby": ["Fotografia", "Cucina"]
+  }
+  

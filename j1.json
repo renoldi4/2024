@@ -1,0 +1,20 @@
+{
+  "id": 1,
+  "nome": "Davide",
+  "cognome": "Raino",
+  "eta": 23,
+  "indirizzo": "Via Montebello 3",
+  "citta": "Casnago",
+  "telefoni": ["1234", "3"],
+  "sport": ["Palestra", "Kung Fu"],
+  "istruzione": "Laurea in informatica",
+  "esperienza": [
+    {
+      "posizione": "Sviluppatore",
+      "azienda": "Tech",
+      "durata": "2 anni"
+    }
+  ],
+  "lingue": ["Italiano", "Inglese"],
+  "hobby": ["Videogiochi", "Escursioni"]
+}

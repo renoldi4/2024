@@ -1,0 +1,21 @@
+{
+    "id": 3,
+    "nome": "Anna",
+    "cognome": "Rampino",
+    "eta": 29,
+    "indirizzo": "Corso Bello 9",
+    "citta": "Milano",
+    "telefoni": ["3921234567"],
+    "sport": ["Yoga"],
+    "istruzione": "Laurea in economia",
+    "esperienza": [
+      {
+        "posizione": "Manager",
+        "azienda": "Wat.inc",
+        "durata": "3 anni"
+      }
+    ],
+    "lingue": ["Italiano", "Inglese", "Spagnolo"],
+    "hobby": ["Lettura", "Viaggiare"]
+  }
+  
