@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolio>
+    <utente id="3">
+        <titolo>Portfolio di Anna Rampino</titolo>
+        <abstract>Anna Rampino, 29 anni, laureata in Economia, è manager con tre anni di esperienza presso Wat.inc. Appassionata di yoga, lettura e viaggi, parla italiano, inglese e spagnolo.</abstract>
+        <link>https://esempio.com/portfolio-anna-rampino</link>
+        <dettagli>
+            <nome>Anna</nome>
+            <cognome>Rampino</cognome>
+            <eta>29</eta>
+            <indirizzo>Corso Bello 9</indirizzo>
+            <citta>Milano</citta>
+            <telefoni>
+                <telefono>3921234567</telefono>
+            </telefoni>
+            <sport>
+                <sport>Yoga</sport>
+            </sport>
+            <istruzione>Laurea in economia</istruzione>
+            <esperienze>
+                <esperienza>
+                    <posizione>Manager</posizione>
+                    <azienda>Wat.inc</azienda>
+                    <durata>3 anni</durata>
+                </esperienza>
+            </esperienze>
+            <lingue>
+                <lingua>Italiano</lingua>
+                <lingua>Inglese</lingua>
+                <lingua>Spagnolo</lingua>
+            </lingue>
+            <hobby>
+                <hobby>Lettura</hobby>
+                <hobby>Viaggiare</hobby>
+            </hobby>
+        </dettagli>
+    </utente>
+</portfolio>

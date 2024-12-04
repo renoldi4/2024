@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolio>
+    <utente id="2">
+        <titolo>Portfolio di Manuele Raito</titolo>
+        <abstract>Manuele Raito, 23 anni, laureato in Moda, ha lavorato come assistente presso Modax per un anno. È appassionato di sport come palestra, nuoto e difesa personale. Parla italiano e francese, e si diletta in fotografia e cucina.</abstract>
+        <link>https://esempio.com/portfolio-manuele-raito</link>
+        <dettagli>
+            <nome>Manuele</nome>
+            <cognome>Raito</cognome>
+            <eta>23</eta>
+            <indirizzo>Via Montebrutto 3</indirizzo>
+            <citta>Laina</citta>
+            <telefoni>
+                <telefono>3434343434</telefono>
+                <telefono>2</telefono>
+                <telefono>777</telefono>
+            </telefoni>
+            <sport>
+                <sport>Palestra</sport>
+                <sport>Nuoto</sport>
+                <sport>Difesa</sport>
+            </sport>
+            <istruzione>Laurea in moda</istruzione>
+            <esperienze>
+                <esperienza>
+                    <posizione>Assistente</posizione>
+                    <azienda>Modax</azienda>
+                    <durata>1 anno</durata>
+                </esperienza>
+            </esperienze>
+            <lingue>
+                <lingua>Italiano</lingua>
+                <lingua>Francese</lingua>
+            </lingue>
+            <hobby>
+                <hobby>Fotografia</hobby>
+                <hobby>Cucina</hobby>
+            </hobby>
+        </dettagli>
+    </utente>
+</portfolio>

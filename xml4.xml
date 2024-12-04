@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolio>
+    <utente id="4">
+        <titolo>Portfolio di Paolo Scuolaguida</titolo>
+        <abstract>Paolo Scuolaguida, 55 anni, è laureato in Architettura e lavora da 11 anni come progettista presso Renoldi's. Appassionato di tennis e ciclismo, si interessa anche di pittura e guida. Parla italiano, inglese e tedesco.</abstract>
+        <link>https://esempio.com/portfolio-paolo-scuolaguida</link>
+        <dettagli>
+            <nome>Paolo</nome>
+            <cognome>Scuolaguida</cognome>
+            <eta>55</eta>
+            <indirizzo>Piazza Grossa</indirizzo>
+            <citta>Firenze</citta>
+            <telefoni>
+                <telefono>1111111</telefono>
+            </telefoni>
+            <sport>
+                <sport>Tennis</sport>
+                <sport>Ciclismo</sport>
+            </sport>
+            <istruzione>Laurea in Architettura</istruzione>
+            <esperienze>
+                <esperienza>
+                    <posizione>Progettista</posizione>
+                    <azienda>Renoldi's</azienda>
+                    <durata>11 anni</durata>
+                </esperienza>
+            </esperienze>
+            <lingue>
+                <lingua>Italiano</lingua>
+                <lingua>Inglese</lingua>
+                <lingua>Tedesco</lingua>
+            </lingue>
+            <hobby>
+                <hobby>Pittura</hobby>
+                <hobby>Guida</hobby>
+            </hobby>
+        </dettagli>
+    </utente>
+</portfolio>

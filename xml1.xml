@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portfolio>
+    <utente id="1">
+        <titolo>Portfolio di Davide Raino</titolo>
+        <abstract>Davide Raino, 23 anni, è un giovane laureato in Informatica con esperienza come sviluppatore presso l'azienda Tech. È appassionato di sport, tra cui palestra e kung fu, e nel tempo libero si dedica ai videogiochi e alle escursioni. Parla fluentemente italiano e inglese.</abstract>
+        <link>https://esempio.com/portfolio-davide-raino</link>
+        <dettagli>
+            <nome>Davide</nome>
+            <cognome>Raino</cognome>
+            <eta>23</eta>
+            <indirizzo>Via Montebello 3</indirizzo>
+            <citta>Casnago</citta>
+            <telefoni>
+                <telefono>1234</telefono>
+                <telefono>3</telefono>
+            </telefoni>
+            <sport>
+                <sport>Palestra</sport>
+                <sport>Kung Fu</sport>
+            </sport>
+            <istruzione>Laurea in informatica</istruzione>
+            <esperienze>
+                <esperienza>
+                    <posizione>Sviluppatore</posizione>
+                    <azienda>Tech</azienda>
+                    <durata>2 anni</durata>
+                </esperienza>
+            </esperienze>
+            <lingue>
+                <lingua>Italiano</lingua>
+                <lingua>Inglese</lingua>
+            </lingue>
+            <hobby>
+                <hobby>Videogiochi</hobby>
+                <hobby>Escursioni</hobby>
+            </hobby>
+        </dettagli>
+    </utente>
+</portfolio>
