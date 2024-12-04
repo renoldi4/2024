@@ -45,7 +45,7 @@
     </style>
   </head>
   <body>
-    <div>Clicca sulle immagini accedere alla persona: </div>
+    <div>Clicca sulle immagini per accedere alla persona:</div>
     <table border="1">
       <thead>
         <tr>
@@ -53,6 +53,7 @@
           <th>Nome</th>
           <th>Cognome</th>
           <th>Codice Fiscale</th>
+          <th>Portfolio</th>
         </tr>
       </thead>
       <tbody id="demo">
@@ -77,6 +78,8 @@
           dati[x].nome + "</a></td>" +
           "<td>" + dati[x].cognome + "</td>" +
           "<td>" + dati[x].codiceFiscale + "</td>" +
+          "<td><a href='portfolio.html?id=" + id + "'>" +
+          "<img src='img2.png' alt='Portfolio' /></a></td>" +
           "</tr>";
       }
 
@@ -84,4 +87,5 @@
     </script>
   </body>
 </html>
+
 
